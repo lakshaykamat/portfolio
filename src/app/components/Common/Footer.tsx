@@ -55,8 +55,8 @@ const Footer = () => {
         </div>
         <div className="flex items-center">
           <ul className="flex flex-wrap justify-center space-x-7">
-            {data.map((item) => {
-              return <Item link={item.link} text={item.text} jsx={item.jsx} />;
+            {data.map((item,index) => {
+              return <Item key={index} link={item.link} text={item.text} jsx={item.jsx} />;
             })}
           </ul>
         </div>

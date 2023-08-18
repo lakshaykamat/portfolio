@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -9,7 +10,7 @@ const Hero = ({para}) => {
       <div className="container px-4 py-12 mx-auto md:py-24 lg:py-32">
         <div className="md:flex md:items-center">
           <div className="md:w-1/2">
-            <img
+            <Image
               className="w-full mx-auto rounded md:max-w-lg"
               src={MEN_IMG}
               alt="Portrait of Lakshay Kamat"

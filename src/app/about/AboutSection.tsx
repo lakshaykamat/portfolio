@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
@@ -10,17 +11,17 @@ export default function AboutSection({
   return (
     <div>
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="lg:self-center">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 About Me
               </h2>
               <p className="mt-4 text-lg text-gray-500">{para}</p>
-              <div className="mt-8 flex">
+              <div className="flex mt-8">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <FaGraduationCap className="h-6 w-6" />
+                  <div className="flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                    <FaGraduationCap className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="ml-4">
@@ -30,10 +31,10 @@ export default function AboutSection({
                   </p>
                 </div>
               </div>
-              <div className="mt-6 flex">
+              <div className="flex mt-6">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <GiTrophyCup className="h-6 w-6" />
+                  <div className="flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                    <GiTrophyCup className="w-6 h-6" />
                   </div>
                 </div>
                 <div className="ml-4">
@@ -41,20 +42,18 @@ export default function AboutSection({
                     Achievements
                   </h3>
                   <ul className="mt-2 text-base text-gray-500 list-disc list-inside">
-                    {achievements.map((item,index)=>{
-                       return <li key={index}>{item}</li>
-                     
-                    })}
+                    {achievements.map((item: string ) =><li key={item}>{item}</li>)}
                   </ul>
                 </div>
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <img
+              <Image
+              alt="about"
                 src={image}
                 width={500}
                 height={500}
-                className="rounded-lg m-auto"
+                className="m-auto rounded-lg"
               />
             </div>
           </div>
