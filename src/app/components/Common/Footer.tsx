@@ -1,8 +1,51 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { socialMediaLinks } from "../../../utils/socialMediaLinks";
-
+import { socialMediaLinks } from "../../../data";
+const Item = ({ link, text, jsx }) => {
+  return (
+    <li className="m-2 text-center">
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-white"
+      >
+        <div className="flex items-center justify-center gap-2">
+          {jsx}
+          <h5>{text}</h5>
+        </div>
+      </a>
+    </li>
+  );
+};
+const data = [
+  {
+    link: `mailto:${socialMediaLinks.mail}`,
+    text: "Email",
+    jsx: <FaEnvelope />,
+  },
+  {
+    link: `tel:${socialMediaLinks.tel}`,
+    text: "Phone",
+    jsx: <FaPhoneAlt />,
+  },
+  {
+    link: socialMediaLinks.github,
+    text: "Github",
+    jsx: <FiGithub />,
+  },
+  {
+    link: socialMediaLinks.linkedIn,
+    text: "LinkedIn",
+    jsx: <FiLinkedin />,
+  },
+  {
+    link: socialMediaLinks.twitter,
+    text: "Twitter",
+    jsx: <FiTwitter />,
+  },
+];
 const Footer = () => {
   return (
     <footer className="px-3 py-5 text-gray-300 bg-gray-900">
@@ -11,62 +54,10 @@ const Footer = () => {
           <h3 className="mb-4 text-2xl font-bold md:m-0">Lakshay Kamat</h3>
         </div>
         <div className="flex items-center">
-          <ul className="flex flex-wrap justify-center space-x-4">
-            <li className="m-2 text-center">
-              <a
-                href={`mailto:${socialMediaLinks.mail}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                <FaEnvelope className="inline-block mr-1" />
-                Email
-              </a>
-            </li>
-            <li className="m-2 text-center">
-              <a
-                href={`tel:${socialMediaLinks.tel}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                <FaPhoneAlt className="inline-block mr-1" />
-                Phone
-              </a>
-            </li>
-            <li className="m-2 text-center">
-              <a
-                href={socialMediaLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                <FiGithub className="inline-block mr-1" />
-                Github
-              </a>
-            </li>
-            <li className="m-2 text-center">
-              <a
-                href={socialMediaLinks.linkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                <FiLinkedin className="inline-block mr-1" />
-                LinkedIn
-              </a>
-            </li>
-            <li className="m-2 text-center">
-              <a
-                href={socialMediaLinks.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                <FiTwitter className="inline-block mr-1" />
-                Twitter
-              </a>
-            </li>
+          <ul className="flex flex-wrap justify-center space-x-7">
+            {data.map((item) => {
+              return <Item link={item.link} text={item.text} jsx={item.jsx} />;
+            })}
           </ul>
         </div>
       </div>

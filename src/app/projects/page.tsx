@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import {projects} from '../../utils/projects'
+import { projects } from "../../data";
 
 const ProjectPage = () => {
   return (
@@ -9,14 +9,15 @@ const ProjectPage = () => {
         <h1 className="mb-8 text-3xl font-bold">My Projects</h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <ProjectCard 
-            key={index}
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            techStack={project.techStack}
-            githubLink={project.githubLink}
-            demoLink={project.demoLink} />
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              techStack={project.techStack}
+              githubLink={project.githubLink}
+              demoLink={project.demoLink}
+            />
           ))}
         </div>
       </div>

@@ -3,8 +3,8 @@ import Hero from "./components/Home/Hero";
 import ResumeCV from "./components/Home/ResumeCV";
 import Testimonials from "./components/Home/Testimonial";
 
-import { testimonials } from "../utils/testimonial";
-import { awards } from "../utils/cerificates";
+import { testimonials } from "../data";
+import { awards } from "../data";
 
 export default function Home() {
   const para = {
