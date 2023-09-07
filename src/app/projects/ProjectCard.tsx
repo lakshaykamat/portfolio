@@ -11,7 +11,7 @@ const ProjectCard = ({
     return (
       <span
         key={index}
-        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+        className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
       >
         #{item}
       </span>
@@ -22,30 +22,31 @@ const ProjectCard = ({
     return (
       <span
         key={index}
-        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+        className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full "
       >
         {item}
       </span>
     );
   });
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{description}</p>
+    <div className="flex flex-col overflow-hidden bg-white rounded-lg shadow-lg">
+      <div className="flex-grow px-6 py-4 ">
+        <div className="mb-2 text-xl font-bold">{title}</div>
+        <p className="text-base text-gray-700">{description}</p>
       </div>
-      <div className="px-6 py-4">{TAGS}</div>
-      <div className="px-6 py-4">{TECH_STACK}</div>
+      {/* <div className="px-6 py-1">{TAGS}</div> */}
+      <div className="px-6 py-1">{TECH_STACK}</div>
       <div className="px-6 py-4">
-        <a
+        {/* <a
           href={demoLink}
-          className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mr-2 mb-2"
+          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
         >
           Live Demo
         </a>
+        {} */}
         <a
           href={githubLink}
-          className="inline-block bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full mr-2 mb-2"
+          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
         >
           Source Code
         </a>
