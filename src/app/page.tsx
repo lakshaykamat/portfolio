@@ -6,6 +6,7 @@ import Testimonials from "./components/Home/Testimonial";
 import { testimonials } from "../data";
 import { awards } from "../data";
 import TechStack from "./components/Home/TechStack";
+import ToolsSection from "./components/Home/ToolsSection";
 
 export default function Home() {
   const para = {
@@ -18,7 +19,7 @@ export default function Home() {
       <Hero para={para.Hero} />
       <Testimonials testimonials={testimonials} />
       <ResumeCV para={para.resume} />
-      <TechStack/>
+      <ToolsSection/>
       {/* <Certificates awards={awards} /> */}
     </>
   );
