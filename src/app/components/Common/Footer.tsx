@@ -1,6 +1,7 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { BsWhatsapp} from "react-icons/bs";
 import { socialMediaLinks } from "../../../data";
 const Item = ({ link, text, jsx }) => {
   return (
@@ -25,11 +26,11 @@ const data = [
     text: "Email",
     jsx: <FaEnvelope />,
   },
-  {
-    link: `tel:${socialMediaLinks.tel}`,
-    text: "Phone",
-    jsx: <FaPhoneAlt />,
-  },
+  // {
+  //   link: `tel:${socialMediaLinks.tel}`,
+  //   text: "Phone",
+  //   jsx: <FaPhoneAlt />,
+  // },
   {
     link: socialMediaLinks.github,
     text: "Github",
@@ -45,6 +46,11 @@ const data = [
     text: "Twitter",
     jsx: <FiTwitter />,
   },
+  {
+    link:socialMediaLinks.whatsApp,
+    text:"Whatsapp",
+    jsx:<BsWhatsapp/>
+  }
 ];
 const Footer = () => {
   return (
