@@ -62,7 +62,7 @@ const ToolsSection = () => {
       ];
   return (
     <section className="py-16 bg-gray-100">
-      <div className="max-w-4xl px-4 mx-auto outline">
+      <div className="max-w-4xl px-4 mx-auto">
         <h2 className="mb-4 text-3xl font-semibold">Tools and Technologies</h2>
         <div className="flex flex-wrap justify-center gap-4">
 
