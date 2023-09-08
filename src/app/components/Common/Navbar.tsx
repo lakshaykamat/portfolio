@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 //focus:bg-gray-500 focus:font-bold focus:text-white
   const allLinks = navbarData.links.map((item,index)=>{
-    return <Link key={index} href={item.path} className={`text-gray-300 hover:text-white md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded-md text-sm font-medium`}>{item.linkName}</Link>
+    return <Link key={index} href={item.path} className={`text-gray-300 hover:bg-gray-700 hover:text-white md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded-md text-sm font-medium`}>{item.linkName}</Link>
   })
   return (
     <nav className="bg-gray-900">
@@ -41,7 +41,7 @@ const Navbar = () => {
           <div className="absolute flex md:hidden right-5 top-4">
             <button
               type="button"
-              className="text-gray-500 hover:text-white focus:outline-none focus:text-white"
+              className="p-1 text-gray-500 bg-gray-700 rounded hover:text-white focus:outline-none focus:text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
               <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
