@@ -9,7 +9,7 @@ const Testimonials = ({testimonials}) => {
           <div className="flex flex-wrap justify-evenly">
             {testimonials.map((testimonial: { id:number,name:string,image:string,auother:string,quote:string}) => (
               <div key={testimonial.id} className="w-full px-4 mb-8 lg:w-1/3">
-                <div className="p-6 bg-white rounded-lg shadow">
+                <div className="p-6 bg-white rounded shadow">
                   <p className="mb-4 text-gray-600">{testimonial.quote}</p>
                   <div className="flex items-center">
                       <Image src={testimonial.image} alt="client" width={40} height={40} className="rounded-[50%]"/>

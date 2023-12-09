@@ -1,7 +1,7 @@
 export const testimonials = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Mark Soe",
       image:
         "https://i.pinimg.com/736x/6b/f7/d7/6bf7d7592f488f0749534b8db8d5ffd7.jpg",
       auother: "Web Developer",

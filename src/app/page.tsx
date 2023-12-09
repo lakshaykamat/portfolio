@@ -1,18 +1,15 @@
-import Certificates from "./components/Home/Certificates";
 import Hero from "./components/Home/Hero";
 import ResumeCV from "./components/Home/ResumeCV";
 import Testimonials from "./components/Home/Testimonial";
 
 import { testimonials } from "../data";
-import { awards } from "../data";
-import TechStack from "./components/Home/TechStack";
 import ToolsSection from "./components/Home/ToolsSection";
 
 export default function Home() {
   const para = {
-    Hero: "Freelance Web Developer",
+    Hero: "Programmer with a passion",
     resume:
-      "Hello, my name is Lakshay Kamat, and I am a web developer with three years of experience in the field. I have worked with many different languages, including React, Node.js, Django, and Angular. Additionally, I have experience working as a backend developer. I have a strong understanding of programming concepts, including data structures and algorithms, object-oriented programming, and SQL.",
+      "Experienced web developer proficient in React and Node.js, with expertise in backend development, skilled in programming concepts, data structures, OOP, and SQL and NOSQL",
   };
   return (
     <>

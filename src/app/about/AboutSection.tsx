@@ -42,7 +42,7 @@ export default function AboutSection({
                     Achievements
                   </h3>
                   <ul className="mt-2 text-base text-gray-500 list-disc list-inside">
-                    {achievements.map((item: string ) =><li key={item}>{item}</li>)}
+                    {achievements.slice(0,1).map((item: string ) =><li key={item}>{item}</li>)}
                   </ul>
                 </div>
               </div>

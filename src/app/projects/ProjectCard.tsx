@@ -22,16 +22,16 @@ const ProjectCard = ({
     return (
       <span
         key={index}
-        className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full "
+        className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded "
       >
         {item}
       </span>
     );
   });
   return (
-    <div className="flex flex-col overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="flex flex-col overflow-hidden bg-white rounded shadow-lg">
       <div className="flex-grow px-6 py-4 ">
-        <div className="mb-2 text-xl font-bold">{title}</div>
+        <div className="mb-2 text-2xl font-bold">{title}</div>
         <p className="text-base text-gray-700">{description}</p>
       </div>
       {/* <div className="px-6 py-1">{TAGS}</div> */}
@@ -46,7 +46,7 @@ const ProjectCard = ({
         {} */}
         <a
           href={githubLink}
-          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
         >
           Source Code
         </a>

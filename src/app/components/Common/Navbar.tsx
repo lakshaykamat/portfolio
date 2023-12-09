@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 import { useState } from "react";
 
 
 const Navbar = () => {
+  const pathname = usePathname()
+  console.log(pathname)
   const [isOpen, setIsOpen] = useState(false);
   const navbarData = {
     title: "Lakshay Kamat",
@@ -24,17 +27,18 @@ const Navbar = () => {
         linkName: "About"
       },
       {
+        id:4,
         path: "http://brogrammerblog.netlify.app",
         linkName: "Blog"
       },
     ],
   };
 //focus:bg-gray-500 focus:font-bold focus:text-white
-  const allLinks = navbarData.links.map((item,index)=>{
-    return <Link key={index} href={item.path} className={`text-gray-300 hover:bg-gray-700 hover:text-white md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded-md text-sm font-medium`}>{item.linkName}</Link>
+  const allLinks = navbarData.links.map((item)=>{
+    return <Link key={item.id} href={item.path} className={`text-gray-300 ${pathname==item.path && "bg-gray-700 font-medium text-white"} hover:bg-gray-800 md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded text-sm`}>{item.linkName}</Link>
   })
   return (
-    <nav className="bg-gray-900">
+    <nav className="bg-gray-950">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center justify-between py-4 md:flex-row">
           <div className="text-xl font-bold text-white">{navbarData.title}</div>
