@@ -6,9 +6,9 @@ const ToolsSection = () => {
 
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-black">
       <div className="max-w-4xl px-4 mx-auto">
-        <h2 className="mb-4 text-3xl font-semibold">Tools and Technologies</h2>
+        <h2 className="mb-4 text-3xl font-semibold text-gray-200">Tools and Technologies</h2>
         <div className="flex flex-wrap justify-center gap-4">
 
             {

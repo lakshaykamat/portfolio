@@ -4,7 +4,7 @@ import { FaAward } from 'react-icons/fa';
 
 const AwardCard = ({ award }) => {
   return (
-    <div className="max-w-sm mx-5 my-4 overflow-hidden bg-white rounded-lg shadow-lg md:mx-auto">
+    <div className="max-w-sm mx-5 my-4 overflow-hidden bg-black rounded-lg shadow-lg md:mx-auto">
       <div className="px-4 py-2">
         <h2 className="text-2xl font-bold text-gray-800 uppercase">{award.title}</h2>
         <p className="mt-1 text-sm text-gray-600">{award.issuer}</p>

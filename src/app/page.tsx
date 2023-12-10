@@ -9,13 +9,13 @@ export default function Home() {
   const para = {
     Hero: "Programmer with a passion",
     resume:
-      "Experienced web developer proficient in React and Node.js, with expertise in backend development, skilled in programming concepts, data structures, OOP, and SQL and NOSQL",
+      "Experienced web developer proficient in React and Node.js, with expertise in backend development, skilled in programming concepts, Java, data structures, OOP, and Databases",
   };
   return (
     <>
-      <Hero para={para.Hero} />
+      <Hero para={para.Hero} para2={para.resume} />
       <Testimonials testimonials={testimonials} />
-      <ResumeCV para={para.resume} />
+      {/* <ResumeCV para={para.resume} /> */}
       <ToolsSection/>
       {/* <Certificates awards={awards} /> */}
     </>

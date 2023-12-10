@@ -4,7 +4,7 @@ function ResumeCV({ para }: { para: string }) {
   const RESUME_LINK = "https://docs.google.com/document/d/1i-cikZsozgMl3G8L8ZyGXLBZm20BG0wILBDahFoHTQU/edit?usp=sharing"
   const RESUME_PUB = "https://docs.google.com/document/d/e/2PACX-1vToHet2cZHMH3tnArW5RtBwGLR1mmPX3Qze8dLs3j7IfUb16kaKi6EmnCAmZsBc1u0dX-lx4928mprB/pub"
   return (
-    <section className="py-16 bg-gray-100 ">
+    <section className="py-16 bg-black">
       <div className="container max-w-2xl px-4 m-auto mx-auto md:m-auto">
         <h2 className="mb-4 text-3xl font-semibold">Resume &amp; CV</h2>
         <div className="md:m-0">

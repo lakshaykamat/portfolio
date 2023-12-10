@@ -38,7 +38,7 @@ const Navbar = () => {
     return <Link key={item.id} href={item.path} className={`text-gray-300 ${pathname==item.path && "bg-gray-700 font-medium text-white"} hover:bg-gray-800 md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded text-sm`}>{item.linkName}</Link>
   })
   return (
-    <nav className="bg-gray-950">
+    <nav className="bg-black border-b border-gray-800">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center justify-between py-4 md:flex-row">
           <div className="text-xl font-bold text-white">{navbarData.title}</div>

@@ -61,7 +61,7 @@ const TechStack = () => {
     },
   ];
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="py-16 bg-black">
       <div className="max-w-4xl px-4 mx-auto">
         <h1 className="mb-4 text-3xl font-semibold">Tools and Technologies</h1>
         {/* <div className="flex gap-10">
