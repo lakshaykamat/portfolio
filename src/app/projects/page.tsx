@@ -1,19 +1,9 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import { projects } from "../../data";
+import ProjectCard from "./ProjectCard";
+import { ProjectCardType } from "../../types";
 
 const ProjectPage = () => {
-  const projectsJSX = projects.map((project, index) => {
-    return <ProjectCard
-      key={index}
-      title={project.title}
-      description={project.description}
-      tags={project.tags}
-      techStack={project.techStack}
-      githubLink={project.githubLink}
-      demoLink={project.demoLink}
-    />
-  })
   return (
     <div className="bg-gray-100 ">
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
@@ -21,7 +11,11 @@ const ProjectPage = () => {
           Projects
         </h2>
         <div className="flex flex-col gap-6 my-6">
-          {projectsJSX}
+          {
+            projects.map((item)=>{
+              return <ProjectCard key={item.id} githubLink={item.githubLink} description={item.description} isCompleted={item.isCompleted} techStack={item.techStack} title={item.title}/>
+            })
+          }
         </div>
       </div>
     </div>
