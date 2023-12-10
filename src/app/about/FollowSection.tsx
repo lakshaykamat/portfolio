@@ -14,7 +14,7 @@ const FollowUs = ({socialMediaLinks}) => {
           <p className="max-w-xl mx-auto mt-5 text-gray-400 text-md">Follow us on social media to stay up-to-date with our latest news and announcements.</p>
         </div>
         <div className="mt-12">
-          <div className="flex items-center justify-center gap-20">
+          <div className="flex flex-wrap justify-center gap-20">
             <a href={socialMediaLinks.twitter}  className="text-gray-200 hover:text-gray-400">
               <span className="sr-only">Twitter</span>
               <FaTwitter className="w-8 h-8 mx-auto" />
