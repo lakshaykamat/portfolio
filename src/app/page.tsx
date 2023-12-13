@@ -1,5 +1,4 @@
 import Hero from "./components/Home/Hero";
-import ResumeCV from "./components/Home/ResumeCV";
 import Testimonials from "./components/Home/Testimonial";
 
 import { testimonials } from "../data";

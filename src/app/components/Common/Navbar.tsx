@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname()
-  console.log(pathname)
   const [isOpen, setIsOpen] = useState(false);
   const navbarData = {
     title: "Lakshay Kamat",
