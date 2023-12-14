@@ -18,7 +18,7 @@ const ProjectCard = (props: Props) => {
     );
   });
   return (
-    <div className="relative flex-col overflow-hidden bg-gray-900 rounded shadow-lg">
+    <div className="relative flex-col overflow-hidden bg-slate-800 rounded shadow-lg">
       {props.isCompleted ? CardLables.Completed : CardLables.InProgress}
       <div className="flex-grow px-6 py-4 ">
         <h3 className="mb-2 text-xl font-bold text-gray-300">{props.title}</h3>

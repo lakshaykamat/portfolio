@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectPage = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-slate-900">
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
         <h2 className="text-3xl font-extrabold text-gray-200 sm:text-4xl">
           Projects
