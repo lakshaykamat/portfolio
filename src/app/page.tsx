@@ -14,9 +14,7 @@ export default function Home() {
     <div className="px-2 bg-slate-900">
       <Hero para={para.Hero} para2={para.resume} />
       <Testimonials testimonials={testimonials} />
-      {/* <ResumeCV para={para.resume} /> */}
       <ToolsSection />
-      {/* <Certificates awards={awards} /> */}
     </div>
   );
 }

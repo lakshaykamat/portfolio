@@ -2,6 +2,7 @@ import { FaEnvelope ,FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 import { socialMediaLinks } from "../../../data";
 
 const SocialMediaIcon = ({ link, text, jsx }) => {
+  const ICON_DIMESION = {width:6,height:6}
   return (
     <li className="m-2 text-center">
       <a
@@ -10,9 +11,8 @@ const SocialMediaIcon = ({ link, text, jsx }) => {
         rel="noopener noreferrer"
         className="hover:text-white"
       >
-        <div className="">
-          {jsx}
-          {/* <h5>{text}</h5> */}
+        <div title={text}>
+          {jsx(`w-${ICON_DIMESION.width} h-${ICON_DIMESION.height}`)}
         </div>
       </a>
     </li>
@@ -22,22 +22,22 @@ const socialMediaConfig = [
   {
     link: `mailto:${socialMediaLinks.mail}`,
     text: "Email",
-    jsx: <FaEnvelope />,
+    jsx:(styles)=><FaEnvelope className={styles} />,
   },
   {
     link: socialMediaLinks.github,
     text: "Github",
-    jsx:<FaGithub/>,
+    jsx:(styles)=><FaGithub className={styles} />,
   },
   {
     link: socialMediaLinks.linkedIn,
     text: "LinkedIn",
-    jsx:<FaLinkedin/>,
+    jsx:(styles)=><FaLinkedin className={styles} />,
   },
   {
     link: socialMediaLinks.twitter,
     text: "Twitter",
-    jsx: <FaTwitter/>,
+    jsx:(styles)=><FaTwitter className={styles} />,
   },
 ];
 const Footer = () => {
