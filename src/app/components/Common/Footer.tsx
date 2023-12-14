@@ -54,7 +54,7 @@ const data = [
 ];
 const Footer = () => {
   return (
-    <footer className="px-3 py-5 text-gray-300 bg-gray-900">
+    <footer className="px-3 py-5 text-gray-300 border-t border-slate-800 bg-slate-800">
       <div className="container flex flex-col items-center justify-between mx-auto md:flex-row">
         <div className="flex items-center">
           <h3 className="mb-4 text-2xl font-bold md:m-0">Lakshay Kamat</h3>
