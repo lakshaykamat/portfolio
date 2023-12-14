@@ -6,7 +6,7 @@ import { BsSkype, BsTelephoneFill, BsWhatsapp } from 'react-icons/bs';
 const FollowUs = ({socialMediaLinks}) => {
 
   return (
-    <div className="py-16 bg-black">
+    <div className="py-16 bg-slate-900">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold tracking-wide text-blue-500 uppercase">Follow Me</h2>
