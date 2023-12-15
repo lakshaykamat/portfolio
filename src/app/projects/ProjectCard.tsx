@@ -18,7 +18,7 @@ const ProjectCard = (props: Props) => {
     );
   });
   return (
-    <div className="relative flex-col overflow-hidden bg-gray-900 rounded shadow-lg">
+    <div className="relative flex-col overflow-hidden rounded shadow-lg bg-slate-800">
       {props.isCompleted ? CardLables.Completed : CardLables.InProgress}
       <div className="flex-grow px-6 py-4 ">
         <h3 className="mb-2 text-xl font-bold text-gray-300">{props.title}</h3>
@@ -28,7 +28,7 @@ const ProjectCard = (props: Props) => {
       <div className="px-6 py-4">
         <a
           href={props.githubLink.toString()}
-          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+          className="btn-blue-500"
         >
           Source Code
         </a>
