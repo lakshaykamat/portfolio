@@ -5,7 +5,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { BlogPost } from '../types'
 
-const postsDirectory = path.join(process.cwd(), 'blogposts')
+const postsDirectory = path.join(process.cwd(), 'BlogPosts')
 
 export function getSortedPostsData() {
     // Get file names under /posts
