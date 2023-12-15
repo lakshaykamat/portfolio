@@ -5,7 +5,7 @@ const Testimonials = ({ testimonials }) => {
   return (
       <div className="pb-10 mx-auto lg:px-20">
         <h2 className="mb-10 text-4xl font-bold text-center text-gray-200">Testimonials</h2>
-        <div className="flex flex-col gap-12 px-4 justify-evenly lg:flex-row">
+        <div className="flex flex-col gap-12 justify-evenly lg:flex-row">
           {testimonials.map((testimonial: { id: number, name: string, image: string, auother: string, quote: string }) => (
             <TestimonialCard key={testimonial.id} name={testimonial.name} quote={testimonial.quote} auother={testimonial.auother} image={testimonial.image} />
           ))}

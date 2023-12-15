@@ -8,3 +8,10 @@ export type ProjectCardType = {
     githubLink:String,
     demoLink:String
 }
+
+export type BlogPost = {
+    id: string,
+    title: string,
+    date: string,
+    description:string
+}
