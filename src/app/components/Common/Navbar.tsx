@@ -27,8 +27,8 @@ const Navbar = () => {
       },
       {
         id:4,
-        path: "http://brogrammerblog.netlify.app",
-        linkName: "Blog"
+        path: "/blog",
+        linkName: "Blogs"
       },
     ],
   };
