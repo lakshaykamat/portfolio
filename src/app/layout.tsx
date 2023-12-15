@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <html lang="en">
-      <body>
+      <body className='text-gray-300 bg-slate-900'>
         <Navbar />
         {children}
         <Footer />

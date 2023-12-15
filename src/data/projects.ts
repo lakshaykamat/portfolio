@@ -24,7 +24,7 @@ const languages = {
       isCompleted:true,
       title: "Password Generator",
       description:
-        "A password generator project creates strong and customizable passwords for users, with features such as encryption and multi-factor authentication to enhance security. Its purpose is to provide secure passwords for online accounts and data protection.",
+        "   Secure password gen: Encryption & multi-factor auth for robust online protection.",
       tags: ["password", "conversion", "tools"],
       techStack: [
         languages.frontEnd.HTML,
@@ -85,6 +85,22 @@ const languages = {
         languages.backEnd.REST_API
       ],
       githubLink: "https://github.com/lakshaykamat/snap-note",
+      demoLink: null,
+    },
+    {
+      id:5,
+      isCompleted:false,
+      title: "Brogrammer Blog",
+      description:
+        "Snap Note: Organize and create both public and private notes, neatly sorted into folders for easy management.",
+      tags: ["blog"],
+      techStack: [
+        languages.backEnd.MongoDB,
+        languages.backEnd.Nodejs,
+        languages.frontEnd.Nextjs,
+        languages.backEnd.REST_API
+      ],
+      githubLink: "https://github.com/lakshaykamat/brogrammer-blog-client",
       demoLink: null,
     },
   ];
