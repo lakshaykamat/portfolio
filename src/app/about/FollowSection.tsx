@@ -7,7 +7,7 @@ const FollowUs = ({socialMediaLinks}) => {
 
   return (
     <div>
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-base font-semibold tracking-wide text-blue-500 uppercase">Follow Me</h2>
           <p className="mt-1 text-3xl font-extrabold text-gray-200 sm:tracking-tight sm:text-4xl lg:text-5xl">Stay Connected</p>

@@ -11,7 +11,7 @@ export default function Home() {
       "Experienced web developer proficient in React and Node.js, with expertise in backend development, skilled in programming concepts, Java, data structures, OOP, and Databases",
   };
   return (
-    <div className="px-2 bg-slate-900">
+    <div className="px-6 bg-slate-900">
       <Hero para={para.Hero} para2={para.resume} />
       <Testimonials testimonials={testimonials} />
       <ToolsSection />

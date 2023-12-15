@@ -10,7 +10,7 @@ const Hero = ({ para, para2 }) => {
   }
   return (
     // <section className="bg-zinc-900">
-      <div className="container px-4 py-12 mx-auto md:py-24 lg:py-32">
+      <div className="container py-12 mx-auto md:py-24 lg:py-32">
         <div className="md:flex md:items-center">
           <div className="md:w-1/2">
             <Image

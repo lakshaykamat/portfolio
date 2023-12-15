@@ -5,7 +5,7 @@ import { GiTrophyCup } from "react-icons/gi";
 
 export default function AboutSection({ degree, para, image, achievements }) {
   return (
-    <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+    <div className="px-6 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
       <div className="lg:grid lg:grid-cols-2 lg:gap-8">
         <div className="lg:self-center">
           <h2 className="text-3xl font-extrabold text-gray-200 sm:text-4xl">
