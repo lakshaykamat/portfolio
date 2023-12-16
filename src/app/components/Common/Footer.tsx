@@ -1,9 +1,8 @@
-import React from "react";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { BsWhatsapp} from "react-icons/bs";
+import { FaEnvelope ,FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 import { socialMediaLinks } from "../../../data";
-const Item = ({ link, text, jsx }) => {
+
+const SocialMediaIcon = ({ link, text, jsx }) => {
+  const ICON_DIMESION = {width:6,height:6}
   return (
     <li className="m-2 text-center">
       <a
@@ -12,57 +11,46 @@ const Item = ({ link, text, jsx }) => {
         rel="noopener noreferrer"
         className="hover:text-white"
       >
-        <div className="flex items-center justify-center gap-2">
-          {jsx}
-          <h5>{text}</h5>
+        <div title={text}>
+          {jsx(`w-${ICON_DIMESION.width} h-${ICON_DIMESION.height}`)}
         </div>
       </a>
     </li>
   );
 };
-const data = [
+const socialMediaConfig = [
   {
     link: `mailto:${socialMediaLinks.mail}`,
     text: "Email",
-    jsx: <FaEnvelope />,
+    jsx:(styles)=><FaEnvelope className={styles} />,
   },
-  // {
-  //   link: `tel:${socialMediaLinks.tel}`,
-  //   text: "Phone",
-  //   jsx: <FaPhoneAlt />,
-  // },
   {
     link: socialMediaLinks.github,
     text: "Github",
-    jsx: <FiGithub />,
+    jsx:(styles)=><FaGithub className={styles} />,
   },
   {
     link: socialMediaLinks.linkedIn,
     text: "LinkedIn",
-    jsx: <FiLinkedin />,
+    jsx:(styles)=><FaLinkedin className={styles} />,
   },
   {
     link: socialMediaLinks.twitter,
     text: "Twitter",
-    jsx: <FiTwitter />,
+    jsx:(styles)=><FaTwitter className={styles} />,
   },
-  {
-    link:socialMediaLinks.whatsApp,
-    text:"Whatsapp",
-    jsx:<BsWhatsapp/>
-  }
 ];
 const Footer = () => {
   return (
-    <footer className="px-3 py-5 text-gray-300 bg-gray-900">
+    <footer className="px-3 py-5 text-gray-300 border-t border-slate-800 bg-slate-800">
       <div className="container flex flex-col items-center justify-between mx-auto md:flex-row">
         <div className="flex items-center">
           <h3 className="mb-4 text-2xl font-bold md:m-0">Lakshay Kamat</h3>
         </div>
         <div className="flex items-center">
           <ul className="flex flex-wrap justify-center space-x-7">
-            {data.map((item,index) => {
-              return <Item key={index} link={item.link} text={item.text} jsx={item.jsx} />;
+            {socialMediaConfig.map((item,index) => {
+              return <SocialMediaIcon key={index} link={item.link} text={item.text} jsx={item.jsx} />;
             })}
           </ul>
         </div>

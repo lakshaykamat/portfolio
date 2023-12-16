@@ -6,8 +6,8 @@ const ToolsSection = () => {
 
 
   return (
-    <section className="py-16 bg-black">
-      <div className="max-w-4xl px-4 mx-auto">
+    // <section className="py-16 bg-black">
+      <div className="max-w-4xl py-10 mx-auto">
         <h2 className="mb-4 text-3xl font-semibold text-gray-200">Tools and Technologies</h2>
         <div className="flex flex-wrap justify-center gap-4">
 
@@ -29,7 +29,7 @@ const ToolsSection = () => {
             }
         </div>
       </div>
-    </section>
+    // </section>
   );
 };
 
