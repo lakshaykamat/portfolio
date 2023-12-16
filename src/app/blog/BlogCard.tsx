@@ -8,7 +8,7 @@ const BlogCard = (props: BlogPost) => {
         <h2 className="my-2 text-2xl font-semibold">{props.title}</h2>
         <span className="text-gray-400">{getFormattedDate(props.date)}</span>
         <p className="flex-1 my-2 mb-6 text-gray-300">{props.description}</p>
-        <Link href={`/blog/${props.id}`} className="mb-6 btn-blue-500">Read more
+        <Link href={`/blog/${props.id}`} className="mb-6 btn-indigo">Read more
         </Link>
     </div>
   )

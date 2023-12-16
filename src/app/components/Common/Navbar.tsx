@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 //focus:bg-gray-500 focus:font-bold focus:text-white
   const allLinks = navbarData.links.map((item)=>{
-    return <Link key={item.id} href={item.path} className={`text-gray-300 ${pathname==item.path && "bg-gray-700 font-medium text-white"} hover:bg-gray-700 md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded text-sm`}>{item.linkName}</Link>
+    return <Link key={item.id} href={item.path} className={`text-gray-300 ${pathname==item.path && "bg-gray-700 font-medium text-white"} hover:bg-gray-700 md:mx-4 my-2 md:my-0 text-center block md:inline-block px-3 py-2 rounded`}>{item.linkName}</Link>
   })
   return (
     <nav className="border-b border-slate-700 bg-slate-800">

@@ -28,7 +28,7 @@ const ProjectCard = (props: Props) => {
       <div className="px-6 py-4">
         <a
           href={props.githubLink.toString()}
-          className="btn-blue-500"
+          className="btn-indigo"
         >
           Source Code
         </a>
