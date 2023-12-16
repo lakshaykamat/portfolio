@@ -8,7 +8,7 @@
     @apply text-3xl font-extrabold text-gray-200 sm:text-4xl;
   }
   h2 {
-    @apply mb-10 text-2xl font-bold text-gray-200 sm:text-4xl;
+    @apply mb-10 text-3xl font-bold text-gray-200 sm:text-4xl;
   }
   h3 {
     @apply mb-4 text-2xl font-semibold text-zinc-300 sm:text-2xl;

@@ -15,11 +15,11 @@ const BlogContent = async ({params}:{ params:{ blogSlug:String}}) => {
 
   const pubDate = getFormattedDate(data.date)
   return (
-    <main className="flex flex-col max-w-3xl px-6 py-12 mx-auto sm:items-center">
+    <main className="flex flex-col px-6 py-12 mx-auto sm:items-center sm:mx-48">
     <h1 className="mb-6">{data.title}</h1>
     <p className="mb-3 font-semibold">{pubDate}</p>
     {
-      <section className="prose prose-h1:text-gray-200 prose-invert prose-slate" dangerouslySetInnerHTML={{__html:data.contentHtml}}>
+      <section className="prose prose-p:leading-relaxed sm:prose-p:leading-loose prose-h1:text-gray-200 prose-invert prose-slate prose-p:text-lg" dangerouslySetInnerHTML={{__html:data.contentHtml}}>
 
       </section>
     }

@@ -1,5 +1,5 @@
 ---
-title: Understanding Gitflow Workflow for Effective Version Control
+title: Gitflow for Effective Version Control
 date: 2023-12-15
 description: Explore Gitflow's effective branching model for streamlined collaboration and version control in software development.
 ---
