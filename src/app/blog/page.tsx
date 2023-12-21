@@ -10,7 +10,7 @@ const BlogPage = () => {
         </h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {
-            posts.map((post)=><BlogCard key={post.id} title={post.title} date={post.date} description={post.description} id={post.id}/>)
+            posts.map((post)=><BlogCard coverImage={post.coverImage} key={post.id} title={post.title} date={post.date} description={post.description} id={post.id}/>)
           }
         </div>
     </div>

@@ -2,11 +2,6 @@ import Footer from './components/Common/Footer';
 import Navbar from './components/Common/Navbar';
 import './globals.css';
 
-interface Metadata {
-  title: string;
-  description: string;
-}
-
 interface RootLayoutProps {
   children: React.ReactNode;
 }
