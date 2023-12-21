@@ -1,17 +1,16 @@
+"use client"
 import Footer from './components/Common/Footer';
 import Navbar from './components/Common/Navbar';
+import { motion ,useScroll, useSpring} from "framer-motion";
 import './globals.css';
-
-interface Metadata {
-  title: string;
-  description: string;
-}
 
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress)
   return (
     <html lang="en">
       <head>
@@ -45,6 +44,7 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
 
       </head>
       <body className='text-gray-300 bg-slate-900'>
+      <motion.div className="fixed top-0 left-0 right-0 z-10 h-2 origin-left bg-indigo-300" style={{ scaleX }} /> 
         <Navbar />
         {children}
         <Footer />

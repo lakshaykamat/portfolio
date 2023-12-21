@@ -1,13 +1,21 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import RESUME_PUB from "../../../data/resume";
 import { Images } from "../../../data";
-const Hero = ({ para, para2 }) => {
+import { motion } from "framer-motion";
+import framerMotionConfig from "../../../lib/framer-motion";
 
+const Hero = ({ para, para2 }) => {
   return (
     <div className="container py-12 mx-auto md:py-24 lg:py-32">
-      <div className="md:flex md:items-center">
-        <div className="md:w-1/2">
+      <motion.div
+        animate="visible"
+        initial="hidden"
+        variants={framerMotionConfig.container}
+        className="md:flex md:items-center"
+      >
+        <motion.div variants={framerMotionConfig.item} className="md:w-1/2">
           <Image
             className="w-full mx-auto rounded brightness-90 saturate-100 md:max-w-lg"
             src={Images.coding[0]}
@@ -15,17 +23,15 @@ const Hero = ({ para, para2 }) => {
             width={400}
             height={400}
           />
-        </div>
-        <div className="mt-8 md:w-1/2 md:ml-12 md:mt-0">
+        </motion.div>
+        <motion.div variants={framerMotionConfig.item} className="mt-8 md:w-1/2 md:ml-12 md:mt-0">
           <h1 className="mb-4 text-4xl font-bold text-zinc-200 md:text-5xl lg:text-6xl">
             Lakshay Kamat
           </h1>
           <p className="mb-3 text-lg leading-relaxed text-zinc-300 md:text-xl">
             {para}
           </p>
-          <p className="mb-6 text-base text-zinc-300">
-            {para2}
-          </p>
+          <p className="mb-6 text-base text-zinc-300">{para2}</p>
           <div className="flex gap-3">
             <Link
               href="/projects"
@@ -40,10 +46,9 @@ const Hero = ({ para, para2 }) => {
             >
               View Resume
             </Link>
-
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
