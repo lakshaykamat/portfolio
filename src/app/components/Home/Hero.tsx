@@ -8,8 +8,8 @@ const Hero = ({ para, para2 }) => {
       <div className="md:flex md:items-center">
         <div className="md:w-1/2">
           <Image
-            className="w-full mx-auto rounded brightness-90 saturate-100 md:max-w-lg"
-            src={`/profile_pic.jpg`}
+            className="mx-auto w-full rounded brightness-90 saturate-100 md:max-w-lg"
+            src={Images.coding[0]}
             alt="Portrait of Lakshay Kamat"
             width={200}
             height={200}

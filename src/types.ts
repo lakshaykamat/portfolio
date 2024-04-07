@@ -14,4 +14,5 @@ export type BlogPost = {
     title: string,
     date: string,
     description:string
+    coverImage:string
 }

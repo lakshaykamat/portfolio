@@ -25,7 +25,9 @@ export default function Home() {
               </p>
             </div>
             <Image
-              alt="Programming Lakshay"
+            alt="Programming Lakshay"
+            width={500}
+            height={500}
               className="max-w-full rounded min-[725px]:w-1/3 brightness-75"
               src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width={500}
@@ -49,7 +51,9 @@ export default function Home() {
               </p>
             </div>
             <Image
-              alt="Echelon insitute of technology"
+
+          alt="Echelon insitute of technology"
+
               className="rounded max-w-full min-[725px]:w-1/3 brightness-75"
               src="https://eitfaridabad.com/wp-content/uploads/2023/01/campus1.webp"
               width={500}
