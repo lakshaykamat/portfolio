@@ -1,12 +1,21 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import RESUME_PUB from "../../../data/resume";
 import { Images } from "../../../data";
+import { motion } from "framer-motion";
+import framerMotionConfig from "../../../lib/framer-motion";
+
 const Hero = ({ para, para2 }) => {
   return (
     <div className="container py-12 mx-auto md:py-24 lg:py-32">
-      <div className="md:flex md:items-center">
-        <div className="md:w-1/2">
+      <motion.div
+        animate="visible"
+        initial="hidden"
+        variants={framerMotionConfig.container}
+        className="md:flex md:items-center"
+      >
+        <motion.div variants={framerMotionConfig.item} className="md:w-1/2">
           <Image
             className="mx-auto w-full rounded brightness-90 saturate-100 md:max-w-lg"
             src={Images.coding[0]}
@@ -14,8 +23,8 @@ const Hero = ({ para, para2 }) => {
             width={200}
             height={200}
           />
-        </div>
-        <div className="mt-8 md:w-1/2 md:ml-12 md:mt-0">
+        </motion.div>
+        <motion.div variants={framerMotionConfig.item} className="mt-8 md:w-1/2 md:ml-12 md:mt-0">
           <h1 className="mb-4 text-4xl font-bold text-zinc-200 md:text-5xl lg:text-6xl">
             Lakshay Kamat
           </h1>
@@ -38,8 +47,8 @@ const Hero = ({ para, para2 }) => {
               View Resume
             </Link>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

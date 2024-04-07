@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   h1 {
     @apply text-3xl font-extrabold text-gray-200 sm:text-4xl;
@@ -13,13 +12,13 @@
   h3 {
     @apply mb-4 text-2xl font-semibold text-zinc-300 sm:text-2xl;
   }
-  p{
+  p {
     @apply mt-2 mb-4 leading-normal text-gray-400 hyphens-auto;
   }
 }
 
 @layer components {
-    .btn-indigo {
-      @apply inline-block px-4 py-2 font-bold text-white bg-indigo-500 rounded hover:bg-indigo-700;
-    }
+  .btn-indigo {
+    @apply inline-block px-4 py-2 font-bold text-white bg-indigo-500 rounded hover:bg-indigo-700;
   }
+}

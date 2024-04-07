@@ -1,4 +1,6 @@
+import framerMotionConfig from "../../lib/framer-motion";
 import CardLables from "./CardLables";
+import {motion } from 'framer-motion'
 type Props = {
   techStack: Array<String>
   isCompleted: boolean
@@ -18,7 +20,7 @@ const ProjectCard = (props: Props) => {
     );
   });
   return (
-    <div className="relative flex-col overflow-hidden rounded shadow-lg bg-slate-800">
+    <motion.div variants={framerMotionConfig.item} className="relative flex-col overflow-hidden rounded shadow-lg bg-slate-800">
       {props.isCompleted ? CardLables.Completed : CardLables.InProgress}
       <div className="flex-grow px-6 py-4 ">
         <h3 className="mb-2 text-xl font-bold text-gray-300">{props.title}</h3>
@@ -32,14 +34,8 @@ const ProjectCard = (props: Props) => {
         >
           Source Code
         </a>
-        {/* <a
-          href={props.githubLink.toString()}
-          className="inline-block px-4 py-2 mb-2 mr-2 font-bold text-black bg-white rounded hover:bg-blue-700"
-        >
-          Source Code
-        </a> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default ProjectCard;
