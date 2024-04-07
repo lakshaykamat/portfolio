@@ -17,18 +17,21 @@ const Hero = ({ para, para2 }) => {
       >
         <motion.div variants={framerMotionConfig.item} className="md:w-1/2">
           <Image
-            className="mx-auto w-full rounded brightness-90 saturate-100 md:max-w-lg"
+            className="w-full mx-auto rounded brightness-90 saturate-100 md:max-w-lg"
             src={Images.coding[0]}
             alt="Portrait of Lakshay Kamat"
             width={200}
             height={200}
           />
         </motion.div>
-        <motion.div variants={framerMotionConfig.item} className="mt-8 md:w-1/2 md:ml-12 md:mt-0">
+        <motion.div
+          variants={framerMotionConfig.item}
+          className="mt-8 md:w-1/2 md:ml-12 md:mt-0"
+        >
           <h1 className="mb-4 text-4xl font-bold text-zinc-200 md:text-5xl lg:text-6xl">
             Lakshay Kamat
           </h1>
-          <p className="mb-3 text-lg leading-relaxed text-zinc-300 md:text-xl">
+          <p className="mb-3 text-lg font-semibold leading-relaxed text-zinc-300 md:text-xl">
             {para}
           </p>
           <p className="mb-6 text-base text-zinc-300">{para2}</p>

@@ -12,7 +12,12 @@ export default function Home() {
       <div className="px-6">
         <Hero para={Description.Heading} para2={Description.caption} />
         <Projects projects={projects} />
-        <motion.div animate="visible" initial="hidden" variants={framerMotionConfig.container}  className="pb-10 mx-auto lg:px-24">
+        <motion.div
+          animate="visible"
+          initial="hidden"
+          variants={framerMotionConfig.container}
+          className="pb-10 mx-auto lg:px-24"
+        >
           <motion.div variants={framerMotionConfig.item} className="mb-20">
             <h2>My Journey</h2>
             <div className="flex flex-col justify-between gap-6 min-[725px]:flex-row">
@@ -23,9 +28,10 @@ export default function Home() {
                 </p>
                 <p className="text-lg">
                   I enjoyed it so much that I continued learning, and now I have
-                  knowledge in various areas. Java is my primary language, and I
-                  can also create beautiful websites using the MERN Stack.
-                  Additionally, I&apos;m proficient in using Git and GitHub.
+                  knowledge in various areas. <i>Java</i> is my primary
+                  language, and I can also create beautiful websites using the{" "}
+                  <i>MERN Stack</i>. Additionally, I&apos;m proficient in using
+                  Git and GitHub.
                 </p>
               </div>
               <Image
