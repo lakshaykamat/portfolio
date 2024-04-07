@@ -17,21 +17,21 @@ export function getSortedPostsData() {
         
         const fullPath = path.join(postsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
-        
         const matterResult = matter(fileContents);
-
+        
+        const img = matterResult.data.coverImage
         const blogPost: BlogPost = {
             id,
             title: matterResult.data.title,
             date: matterResult.data.date,
-            description:matterResult.data.description
+            description:matterResult.data.description,
+            coverImage:img
         }
 
-        
         return blogPost
     });
-    
-    return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
+
+    return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1)
 }
 
 export async function getPostData(id: string) {
@@ -52,6 +52,7 @@ export async function getPostData(id: string) {
         title: matterResult.data.title,
         date: matterResult.data.date,
         description:matterResult.data.description,
+        coverImage:matterResult.data.coverImage,
         contentHtml,
     }
 

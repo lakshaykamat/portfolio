@@ -39,7 +39,7 @@ git push origin feature/new-feature
 
 Once a feature is complete, it gets merged back into the `develop` branch through a pull request. Periodically, when the `develop` branch accumulates enough features for a release, a `release` branch is created.
 
-```bash
+<!-- ```bash
 git checkout develop
 git pull origin develop
 git checkout -b release/1.0.0
@@ -47,13 +47,13 @@ git checkout -b release/1.0.0
 git add .
 git commit -m "Prepare release 1.0.0"
 git push origin release/1.0.0
-```
+``` -->
 
 ### Hotfixes and Maintenance
 
 In the event of critical issues in production, a `hotfix` branch is created from the `main` branch. This allows for immediate fixes without disrupting ongoing development on the `develop` branch.
 
-```bash
+<!-- ```bash
 git checkout main
 git pull origin main
 git checkout -b hotfix/fix-issue
@@ -61,13 +61,13 @@ git checkout -b hotfix/fix-issue
 git add .
 git commit -m "Fix critical issue"
 git push origin hotfix/fix-issue
-```
+``` -->
 
 ### Finalizing Releases
 
 Once a `release` branch is thoroughly tested, it's merged back into both `main` and `develop` branches. Additionally, the `release` branch is deleted.
 
-```bash
+<!-- ```bash
 git checkout main
 git merge --no-ff release/1.0.0
 git tag -a 1.0.0 -m "Version 1.0.0"
@@ -78,7 +78,7 @@ git merge --no-ff release/1.0.0
 git push origin develop
 
 git branch -d release/1.0.0
-```
+``` -->
 
 ## Conclusion
 
