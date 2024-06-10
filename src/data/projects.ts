@@ -7,17 +7,16 @@ const languages = {
     JS: "JavaScript",
     Tailwind: "Tailwind CSS",
     Reactjs: "ReactJS",
-    Nextjs: "NextJS"
+    Nextjs: "NextJS",
   },
   backEnd: {
     Nodejs: "Node.js",
     MongoDB: "MongoDB",
     REST_API: "REST API",
-    PassportJS: "Passport JS"
+    PassportJS: "Passport JS",
   },
 };
 export const projects: Array<ProjectCardType> = [
-
   {
     id: 1,
     isCompleted: false,
@@ -30,7 +29,7 @@ export const projects: Array<ProjectCardType> = [
       languages.backEnd.Nodejs,
       languages.frontEnd.Nextjs,
       languages.backEnd.PassportJS,
-      languages.backEnd.REST_API
+      languages.backEnd.REST_API,
     ],
     githubLink: "https://github.com/lakshaykamat/snap-note",
     demoLink: null,
@@ -46,26 +45,20 @@ export const projects: Array<ProjectCardType> = [
       languages.backEnd.MongoDB,
       languages.backEnd.Nodejs,
       languages.frontEnd.Nextjs,
-      languages.backEnd.REST_API
+      languages.backEnd.REST_API,
     ],
     githubLink: "https://github.com/lakshaykamat/brogrammer-blog-client",
     demoLink: null,
-  },{
+  },
+  {
     id: 3,
     isCompleted: true,
-    title: "Password Generator",
-    description:
-      "   Secure password gen: Encryption & multi-factor auth for robust online protection.",
-    tags: ["password", "conversion", "tools"],
-    techStack: [
-      languages.frontEnd.HTML,
-      languages.frontEnd.CSS,
-      languages.frontEnd.JS,
-    ],
-    githubLink:
-      "https://github.com/lakshaykamat/linktree/tree/master/js-project/password-generator",
-    demoLink:
-      "https://lakshaykamat.github.io/linktree/js-project/password-generator/docs/index.html",
+    title: "Tailor Swift API",
+    description: "Tailor swift api of albums, songs and quotes",
+    tags: ["singer", "artist", "api"],
+    techStack: [languages.backEnd.Nodejs, languages.backEnd.REST_API],
+    githubLink: "https://github.com/lakshaykamat/taylor-swift-api",
+    demoLink: "https://taylor-swift-api.vercel.app/",
   },
   {
     id: 4,
@@ -101,9 +94,7 @@ export const projects: Array<ProjectCardType> = [
     demoLink:
       "https://lakshaykamat.github.io/linktree/js-project/currencyconvertor/docs/index.html",
   },
-
 ];
-
 
 const allProjects = [
   {
@@ -268,4 +259,4 @@ const allProjects = [
     githubLink: "https://github.com/lakshaykamat/todoappfrontend",
     demoLink: "https://lakshaytodolist.netlify.app/",
   },
-]  
+];
