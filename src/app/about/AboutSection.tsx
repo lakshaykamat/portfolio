@@ -32,7 +32,7 @@ export default function AboutSection({ degree, para, image, achievements }) {
             <div className="ml-4">
               <h3 className="text-xl font-bold text-gray-300">Achievements</h3>
               <ul className="mt-2 text-base text-gray-400 list-disc list-inside">
-                {achievements.slice(0, 1).map((item: string) => (
+                {achievements.map((item: string) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>

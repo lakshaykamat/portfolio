@@ -18,12 +18,27 @@ const languages = {
 };
 export const projects: Array<ProjectCardType> = [
   {
+    id: 4,
+    isCompleted: true,
+    title: "SyncTalk - Chat Application and Post Sharing",
+    description:
+      "SyncTalk is a social platform integrating chat, post sharing, liking, commenting, and friend connections, powered by MERN stack and Next.js.",
+    tags: ["social", "chat"],
+    techStack: [
+      languages.backEnd.Nodejs,
+      languages.backEnd.MongoDB,
+      languages.frontEnd.Nextjs,
+    ],
+    githubLink: "https://github.com/lakshaykamat/synctalk",
+    demoLink: "https://synctalk.vercel.app/",
+  },
+  {
     id: 1,
     isCompleted: false,
-    title: "Snap Note",
+    title: "Snap Note - Notes Application",
     description:
       "Snap Note: Organize and create both public and private notes, neatly sorted into folders for easy management.",
-    tags: ["lifestyle"],
+    tags: ["notes"],
     techStack: [
       languages.backEnd.MongoDB,
       languages.backEnd.Nodejs,
@@ -32,10 +47,26 @@ export const projects: Array<ProjectCardType> = [
       languages.backEnd.REST_API,
     ],
     githubLink: "https://github.com/lakshaykamat/snap-note",
-    demoLink: null,
+    demoLink: "https://github.com/lakshaykamat/snap-note",
   },
+
   {
     id: 2,
+    isCompleted: false,
+    title: "URL Shortener - Simplify long urls",
+    description:
+      "Users can convert long URLs into short, shareable links, with the option to use custom short URLs.",
+    tags: ["tools"],
+    techStack: [
+      languages.backEnd.MongoDB,
+      languages.backEnd.Nodejs,
+      languages.backEnd.REST_API,
+    ],
+    demoLink: "https://nice-url-shortner.vercel.app/",
+    githubLink: "https://github.com/lakshaykamat/url-shortner",
+  },
+  {
+    id: 23,
     isCompleted: false,
     title: "Brogrammer Blog",
     description:
@@ -48,8 +79,9 @@ export const projects: Array<ProjectCardType> = [
       languages.backEnd.REST_API,
     ],
     githubLink: "https://github.com/lakshaykamat/brogrammer-blog-client",
-    demoLink: null,
+    demoLink: "https://github.com/lakshaykamat/brogrammer-blog-client",
   },
+
   {
     id: 3,
     isCompleted: true,
@@ -63,7 +95,7 @@ export const projects: Array<ProjectCardType> = [
   {
     id: 4,
     isCompleted: true,
-    title: "Youtube to MP3",
+    title: "Youtube video to MP3",
     description:
       "Create a YouTube to MP3 converter with URL input for audio downloads, as software or a web app.",
     tags: ["mp3", "video", "tools"],
@@ -80,19 +112,33 @@ export const projects: Array<ProjectCardType> = [
   {
     id: 5,
     isCompleted: true,
-    title: "Currency Convertor",
+    title: "Personal Bookself",
     description:
-      "Develop a currency converter project for quick and convenient currency conversions using current exchange rates.",
-    tags: ["money", "conversion", "tools"],
+      "Explore and save your favorite books in your personalized wishlist, organizing and tracking your reading interests efficiently.",
+    tags: ["books", "self-care", "tools"],
     techStack: [
-      languages.frontEnd.HTML,
-      languages.frontEnd.CSS,
+      languages.frontEnd.Nextjs,
+      languages.backEnd.REST_API,
       languages.frontEnd.JS,
     ],
-    githubLink:
-      "https://github.com/lakshaykamat/linktree/tree/master/js-project/currencyconvertor",
+    githubLink: "https://github.com/lakshaykamat/personal-bookself/",
+    demoLink: "https://personal-bookself-sigma.vercel.app/",
+  },
+  {
+    id: 54,
+    isCompleted: true,
+    title: "Street Notes - Notes Storing",
+    description:
+      "Stay organized with our notes app. Simple, intuitive design for effortless note-taking and easy access to your important thoughts.",
+    tags: ["notes", "tools"],
+    techStack: [
+      languages.frontEnd.Nextjs,
+      languages.backEnd.REST_API,
+      languages.frontEnd.JS,
+    ],
+    githubLink: "https://github.com/lakshaykamat/skill-stree-notes-app",
     demoLink:
-      "https://lakshaykamat.github.io/linktree/js-project/currencyconvertor/docs/index.html",
+      "Stay organized with our notes app. Simple, intuitive design for effortless note-taking and easy access to your important thoughts.",
   },
 ];
 
