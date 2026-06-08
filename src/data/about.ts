@@ -1,10 +1,22 @@
+// EDIT ME — keep it short. Two paragraphs. No filler.
 export const about = {
-  image:
-    "https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1lbnxlbnwwfDB8MHx8&auto=format&fit=crop&w=500&q=60",
-  degree: "Bachelor's Degree in Computer Application from YMCA University",
-  para: "I'm a developer who loves playing with code to create cool stuff. Whether it's making websites dance or building apps, I enjoy turning ideas into digital magic while having fun along the way!",
-  achievements: [
-    "Certified in JavaScript and React at HackerRank.",
-    "Achieved a 3-star rating in Java, Python, and SQL at HackerRank and earned a 2-star rating in C",
+  paragraphs: [
+    "Full-Stack Engineer focused on production web applications — APIs, data models, and the interfaces on top.",
+    "Most of my work lives in Next.js and Node.js. I care about systems that are simple to reason about.",
+  ],
+
+  education: {
+    degree: "B.C.A.",
+    school: "Echelon Institute of Technology",
+    period: "2021 — 2024",
+  },
+
+  stack: [
+    "TypeScript",
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Tailwind",
   ],
 };

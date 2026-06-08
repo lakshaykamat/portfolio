@@ -1,58 +1,95 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import RESUME_PUB from "../../../data/resume";
-import { Images } from "../../../data";
-import { motion } from "framer-motion";
-import framerMotionConfig from "../../../lib/framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowDown, Mail } from "lucide-react";
+import { useRef } from "react";
+import { hero } from "../../../data";
 
-const Hero = ({ para, para2 }) => {
+const easeOut = [0.22, 1, 0.36, 1] as const;
+
+const words = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.25 } },
+};
+
+const word = {
+  hidden: { y: "110%" },
+  show: { y: "0%", transition: { duration: 1, ease: easeOut } },
+};
+
+export default function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
+
+  const [first, ...rest] = hero.name.split(" ");
+  const last = rest.join(" ");
+
   return (
-    <div className="container py-12 mx-auto md:py-24 lg:py-32">
+    <section
+      ref={ref}
+      className="relative min-h-[100svh] flex items-center pt-24 pb-16 overflow-hidden"
+    >
       <motion.div
-        animate="visible"
-        initial="hidden"
-        variants={framerMotionConfig.container}
-        className="md:flex md:items-center"
+        style={{ y, opacity }}
+        className="mx-auto max-w-5xl w-full px-6 md:px-10 flex flex-col items-center text-center"
       >
-        <motion.div variants={framerMotionConfig.item} className="md:w-1/2">
-          <Image
-            className="w-full mx-auto rounded brightness-90 saturate-100 md:max-w-lg"
-            src={Images.coding[1]}
-            alt="Portrait of Lakshay Kamat"
-            width={1000}
-            height={1000}
-          />
-        </motion.div>
-        <motion.div
-          variants={framerMotionConfig.item}
-          className="mt-8 md:w-1/2 md:ml-12 md:mt-0"
+        {/* Name */}
+        <motion.h1
+          variants={words}
+          initial="hidden"
+          animate="show"
+          aria-label={hero.name}
+          className="font-serif text-bone tracking-tightest leading-[1]
+                     text-[clamp(2.5rem,9vw,7rem)] whitespace-nowrap"
         >
-          <h1 className="mb-4 text-4xl font-bold text-zinc-200 md:text-5xl lg:text-6xl">
-            Lakshay Kamat
-          </h1>
-          <p className="mb-3 text-lg leading-relaxed text-zinc-300 md:text-xl">
-            {para}
-          </p>
-          <p className="mb-6 text-base text-zinc-300">{para2}</p>
-          <div className="flex gap-3">
-            <Link
-              href="/projects"
-              className="px-4 py-2 text-sm font-bold tracking-wide uppercase bg-indigo-500 rounded-full text-zinc-200 hover:text-gray-00 outline-gray-400 hover:outline-offset-2 outline-2 hover:outline"
+          <span className="inline-block overflow-hidden align-bottom pb-[0.2em] -mb-[0.2em]">
+            <motion.span
+              variants={word}
+              className="inline-block will-change-transform"
             >
-              View Projects
-            </Link>
-            <Link
-              href={RESUME_PUB}
-              target="_blank"
-              className="px-4 py-2 text-sm font-bold tracking-wide uppercase bg-white rounded-full text-zinc-900 outline-gray-400 hover:outline-offset-2 outline-2 hover:outline"
+              {first}
+            </motion.span>
+          </span>{" "}
+          <span className="inline-block overflow-hidden align-bottom pb-[0.2em] -mb-[0.2em]">
+            <motion.span
+              variants={word}
+              className="inline-block italic will-change-transform"
             >
-              View Resume
-            </Link>
-          </div>
+              {last}.
+            </motion.span>
+          </span>
+        </motion.h1>
+
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.85, ease: easeOut }}
+          className="mt-8 md:mt-10 max-w-xl text-ash text-base md:text-lg leading-relaxed"
+        >
+          {hero.tagline.replace(/\s*—\s*/g, ". ")}
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.2, ease: easeOut }}
+          className="mt-10 md:mt-12 flex gap-3"
+        >
+          <Link href="#contact" className="btn-primary">
+            Get in touch <Mail size={16} />
+          </Link>
+          <Link href="#about" aria-label="Scroll to about" className="btn-ghost">
+            <ArrowDown size={16} />
+          </Link>
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
-};
-export default Hero;
+}

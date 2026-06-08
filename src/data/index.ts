@@ -1,9 +1,13 @@
-import { testimonials } from "./testimonial";
-import { projects } from "./projects";
 import { about } from "./about";
-import { awards } from "./awards";
-import {socialMediaLinks} from './socialLinks'
-import { ToolsAndTech } from "./techStack";
-import { Images ,Description} from './hero'
+import { hero, Images, Description } from "./hero";
+import { socialMediaLinks } from "./socialLinks";
+import { resume } from "./resume";
 
-export { testimonials ,projects, about, awards,socialMediaLinks,ToolsAndTech,Images,Description}
+export {
+  about,
+  hero,
+  resume,
+  socialMediaLinks,
+  Images,
+  Description,
+};

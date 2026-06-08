@@ -2,23 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+  --bg: #0A0A0A;
+  --fg: #FFFFFF;
+  --muted: #888888;
+  --line: #1F1F1F;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: #FFFFFF;
+  color: #0A0A0A;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #1F1F1F; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #2A2A2A; }
+
 @layer base {
-  h1 {
-    @apply text-3xl font-extrabold text-gray-200 sm:text-4xl;
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: -0.025em;
+    /* Fraunces: optical size 144 (display), soft 100 — refined, luxury feel */
+    font-variation-settings: "opsz" 144, "SOFT" 100;
   }
-  h2 {
-    @apply mb-10 text-3xl font-bold text-gray-200 sm:text-4xl;
+  h1 { @apply text-5xl sm:text-6xl md:text-7xl leading-[1.02]; }
+  h2 { @apply text-3xl sm:text-4xl md:text-5xl leading-[1.05]; }
+  h3 { @apply text-2xl sm:text-3xl leading-tight; }
+  h4 { @apply text-xl sm:text-2xl leading-snug; }
+
+  /* Italic display = subtler optical size, more refined */
+  h1 em, h2 em, h3 em,
+  h1 i, h2 i, h3 i,
+  .font-serif em, .font-serif i {
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
   }
-  h3 {
-    @apply mb-4 text-2xl font-semibold text-zinc-300 sm:text-2xl;
-  }
+
   p {
-    @apply mt-2 mb-4 leading-normal text-gray-400 hyphens-auto;
+    @apply text-[15px] sm:text-base leading-relaxed text-ash;
   }
+
+  a { @apply transition-colors duration-200; }
 }
 
 @layer components {
-  .btn-indigo {
-    @apply inline-block px-4 py-2 font-bold text-white bg-indigo-500 rounded hover:bg-indigo-700;
+  /* Eyebrow / section label in mono */
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ash;
+  }
+
+  /* Mono meta — dates, tags, role lines */
+  .meta {
+    @apply font-mono text-xs text-ash;
+  }
+
+  /* Hairline */
+  .rule {
+    @apply h-px w-full bg-ink-300;
+  }
+
+  /* Button — primary (white on black) */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium
+           bg-bone text-ink border border-bone rounded-full
+           hover:bg-transparent hover:text-bone transition-all duration-300;
+  }
+
+  /* Button — ghost (outline) */
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium
+           bg-transparent text-bone border border-ink-400 rounded-full
+           hover:border-bone transition-all duration-300;
+  }
+
+  /* Inline link with animated underline */
+  .link-underline {
+    @apply relative inline-flex items-center gap-1 text-bone
+           after:absolute after:left-0 after:-bottom-px after:h-px after:w-full
+           after:origin-right after:scale-x-0 after:bg-bone
+           after:transition-transform after:duration-300
+           hover:after:origin-left hover:after:scale-x-100;
+  }
+
+  /* Section wrapper */
+  .section {
+    @apply scroll-mt-24 py-24 md:py-32;
   }
 }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

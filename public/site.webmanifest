@@ -1,0 +1,13 @@
+{
+  "name": "Lakshay Kamat — Full-Stack Engineer",
+  "short_name": "Lakshay Kamat",
+  "description": "Full-Stack Engineer building production web applications with Next.js, Node.js, and MongoDB.",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "theme_color": "#0A0A0A",
+  "background_color": "#0A0A0A",
+  "display": "standalone",
+  "start_url": "/"
+}

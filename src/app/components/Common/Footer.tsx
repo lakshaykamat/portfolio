@@ -1,62 +1,34 @@
-import { FaEnvelope ,FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
+import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { socialMediaLinks } from "../../../data";
 
-const SocialMediaIcon = ({ link, text, jsx }) => {
-  const ICON_DIMESION = {width:6,height:6}
-  return (
-    <li className="m-2 text-center">
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-white"
-      >
-        <div title={text}>
-          {jsx(`w-${ICON_DIMESION.width} h-${ICON_DIMESION.height}`)}
-        </div>
-      </a>
-    </li>
-  );
-};
-const socialMediaConfig = [
-  {
-    link: `mailto:${socialMediaLinks.mail}`,
-    text: "Email",
-    jsx:(styles)=><FaEnvelope className={styles} />,
-  },
-  {
-    link: socialMediaLinks.github,
-    text: "Github",
-    jsx:(styles)=><FaGithub className={styles} />,
-  },
-  {
-    link: socialMediaLinks.linkedIn,
-    text: "LinkedIn",
-    jsx:(styles)=><FaLinkedin className={styles} />,
-  },
-  {
-    link: socialMediaLinks.twitter,
-    text: "Twitter",
-    jsx:(styles)=><FaTwitter className={styles} />,
-  },
+const socials = [
+  { href: socialMediaLinks.github,   label: "GitHub",   Icon: Github },
+  { href: socialMediaLinks.linkedIn, label: "LinkedIn", Icon: Linkedin },
+  { href: socialMediaLinks.twitter,  label: "Twitter",  Icon: Twitter },
+  { href: `mailto:${socialMediaLinks.mail}`, label: "Email", Icon: Mail },
 ];
-const Footer = () => {
+
+export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="px-3 py-5 text-gray-300 border-t border-slate-800 bg-slate-800">
-      <div className="container flex flex-col items-center justify-between mx-auto md:flex-row">
-        <div className="flex items-center">
-          <h3 className="mb-4 text-2xl font-bold md:m-0">Lakshay Kamat</h3>
-        </div>
-        <div className="flex items-center">
-          <ul className="flex flex-wrap justify-center space-x-7">
-            {socialMediaConfig.map((item,index) => {
-              return <SocialMediaIcon key={index} link={item.link} text={item.text} jsx={item.jsx} />;
-            })}
-          </ul>
+    <footer className="border-t border-ink-300 mt-16">
+      <div className="mx-auto max-w-6xl px-6 md:px-10 py-10 flex items-center justify-between gap-6">
+        <p className="meta">© {year} Lakshay Kamat</p>
+        <div className="flex gap-5">
+          {socials.map(({ href, label, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer me"
+              aria-label={label}
+              className="text-ash hover:text-bone transition-colors"
+            >
+              <Icon className="w-4 h-4" aria-hidden="true" />
+            </a>
+          ))}
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
