@@ -5,7 +5,7 @@ export const hero = {
   location: "India",
   // One-line value prop — what you build and for whom.
   tagline:
-    "I build production web applications — backend systems, APIs, and the UI on top.",
+    "I solve the problems that decide whether a product ships, scales, and stays correct. Most of my work is in the calls that come before the code.",
   // Status block shown next to hero. Set `available: false` if not looking.
   status: {
     available: true,

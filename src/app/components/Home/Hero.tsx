@@ -72,7 +72,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.85, ease: easeOut }}
           className="mt-8 md:mt-10 max-w-xl text-ash text-base md:text-lg leading-relaxed"
         >
-          {hero.tagline.replace(/\s*—\s*/g, ". ")}
+          {hero.tagline}
         </motion.p>
 
         {/* CTAs */}
