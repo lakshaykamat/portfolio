@@ -17,6 +17,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 body {
@@ -108,7 +109,7 @@ body::before {
 
   /* Section wrapper */
   .section {
-    @apply scroll-mt-24 py-24 md:py-32;
+    @apply scroll-mt-20 py-14 md:py-24 lg:py-32;
   }
 }
 

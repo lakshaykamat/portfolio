@@ -9,7 +9,7 @@ export default function Experience() {
     <Section id="experience" number="02" title="Experience">
       <ol className="divide-y divide-ink-300 border-t border-ink-300">
         {experience.map((job, i) => (
-          <Reveal as="li" key={job.company} delay={i * 0.05} className="group py-10 md:py-14">
+          <Reveal as="li" key={job.company} delay={i * 0.05} className="group py-8 md:py-14">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10">
               {/* Left rail — dates */}
               <div className="md:col-span-3 flex md:block items-baseline justify-between">
@@ -47,9 +47,9 @@ export default function Experience() {
 
               {/* Right rail — photos */}
               {job.photos && (
-                <div className="md:col-span-3 flex md:flex-col gap-3 md:gap-4">
+                <div className="md:col-span-3 flex flex-wrap md:flex-nowrap md:flex-col gap-3 md:gap-4">
                   {job.photos.map((p) => (
-                    <figure key={p.src} className="w-32 md:w-full">
+                    <figure key={p.src} className="w-32 sm:w-36 md:w-full">
                       <div className="aspect-[4/5] overflow-hidden rounded-lg border border-ink-300">
                         <Image
                           src={p.src}

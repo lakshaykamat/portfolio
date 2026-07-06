@@ -10,7 +10,7 @@ export default function Projects() {
       <ol className="divide-y divide-ink-300 border-t border-ink-300">
         {projects.map((p, i) => {
           const Row = (
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-16 py-10 md:py-12">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-16 py-8 md:py-12">
               {/* Index + context rail */}
               <div className="md:col-span-3 flex md:flex-col items-baseline md:items-start justify-between gap-1">
                 <span className="font-mono text-xs text-ash-faint select-none" aria-hidden>

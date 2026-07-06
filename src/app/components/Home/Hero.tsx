@@ -62,7 +62,7 @@ export default function Hero() {
           animate="show"
           aria-label={hero.name}
           className="font-display text-bone tracking-tightest leading-[1]
-                     text-[clamp(2.5rem,9vw,7rem)] whitespace-nowrap"
+                     text-[clamp(2rem,9vw,7rem)]"
         >
           <span className="inline-block overflow-hidden align-bottom pb-[0.2em] -mb-[0.2em]">
             <motion.span
@@ -113,7 +113,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 1.2, ease: easeOut }}
-          className="mt-10 md:mt-12 flex gap-3"
+          className="mt-10 md:mt-12 flex flex-wrap justify-center gap-3"
         >
           <Link href="#contact" className="btn-primary">
             Get in touch <Mail size={16} />

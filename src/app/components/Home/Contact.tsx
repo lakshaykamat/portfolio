@@ -55,7 +55,7 @@ export default function Contact() {
                 hidden: { opacity: 0, x: 12 },
                 show:   { opacity: 1, x: 0, transition: { duration: 0.6, ease: easeOut } },
               }}
-              className="group relative flex items-center justify-between py-5 md:py-6"
+              className="group relative flex items-center justify-between gap-4 py-5 md:py-6"
             >
               <a
                 href={c.href}
@@ -67,8 +67,8 @@ export default function Contact() {
               <span className="relative z-10 font-mono text-[11px] uppercase tracking-[0.18em] text-ash-soft pointer-events-none">
                 {c.label}
               </span>
-              <span className="relative z-10 flex items-center gap-3 text-bone font-display text-xl md:text-2xl
-                               group-hover:text-accent transition-colors duration-300 pointer-events-none">
+              <span className="relative z-10 flex items-center gap-2 sm:gap-3 text-bone font-display text-base sm:text-xl md:text-2xl
+                               group-hover:text-accent transition-colors duration-300 pointer-events-none min-w-0">
                 {c.value}
                 {c.copy ? (
                   <button

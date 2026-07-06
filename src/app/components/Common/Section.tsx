@@ -30,7 +30,7 @@ export default function Section({
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12 } } }}
-          className="mb-14 md:mb-20 flex items-end justify-between gap-6 border-b border-ink-300 pb-5"
+          className="mb-10 md:mb-20 flex items-end justify-between gap-6 border-b border-ink-300 pb-5"
         >
           <div className="flex items-baseline gap-5">
             {number && (
