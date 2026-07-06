@@ -1,14 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "./components/Common/Navbar";
 import Footer from "./components/Common/Footer";
 import ScrollProgress from "./components/Common/ScrollProgress";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT"],
   variable: "--font-display",
   display: "swap",
 });
@@ -27,10 +25,10 @@ const jetbrainsMono = JetBrains_Mono({
 
 const SITE = {
   name: "Lakshay Kamat",
-  role: "Full-Stack Engineer",
+  role: "AI Engineer",
   url: "https://lakshaykamat.netlify.app",
   description:
-    "Full-Stack Engineer building production web applications — APIs, data models, and the interfaces on top. Specializing in TypeScript, Next.js, Node.js, MongoDB, and PostgreSQL.",
+    "AI Engineer building production LLM systems — voice agents, RAG pipelines, and agentic automation serving 10k+ requests a day. LangChain, LangGraph, FastAPI, NestJS, vector search, and MLOps.",
   locale: "en_US",
 };
 
@@ -48,16 +46,18 @@ export const metadata: Metadata = {
   generator: "Next.js",
   keywords: [
     "Lakshay Kamat",
-    "Full-Stack Engineer",
-    "Full Stack Developer",
-    "Software Engineer",
-    "Web Developer",
-    "Next.js Developer",
-    "React Developer",
-    "Node.js Developer",
-    "TypeScript",
-    "MongoDB",
-    "PostgreSQL",
+    "AI Engineer",
+    "GenAI Developer",
+    "LLM Engineer",
+    "Voice Agents",
+    "RAG",
+    "AI Agents",
+    "LangChain",
+    "LangGraph",
+    "FastAPI",
+    "NestJS",
+    "Vector Search",
+    "MLOps",
     "Portfolio",
     "India",
   ],
@@ -123,7 +123,7 @@ const jsonLd = {
   url: SITE.url,
   jobTitle: SITE.role,
   description: SITE.description,
-  image: `${SITE.url}/profile_pic.png`,
+  image: `${SITE.url}/pic.png`,
   sameAs: [
     "https://github.com/lakshaykamat",
     "https://www.linkedin.com/in/lakshaykamat",
@@ -131,13 +131,19 @@ const jsonLd = {
   ],
   address: { "@type": "PostalAddress", addressCountry: "IN" },
   knowsAbout: [
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "Voice Agents",
+    "AI Agents",
+    "LangChain",
+    "LangGraph",
+    "Python",
     "TypeScript",
-    "Next.js",
-    "React",
-    "Node.js",
-    "MongoDB",
+    "FastAPI",
+    "NestJS",
     "PostgreSQL",
-    "Tailwind CSS",
+    "Vector Search",
+    "MLOps",
   ],
 };
 
@@ -145,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body className="min-h-screen bg-ink text-bone antialiased">
         <script

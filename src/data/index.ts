@@ -1,12 +1,14 @@
 import { about } from "./about";
 import { hero, Images, Description } from "./hero";
 import { socialMediaLinks } from "./socialLinks";
-import { resume } from "./resume";
+import { experience } from "./experience";
+import { projects } from "./projects";
 
 export {
   about,
   hero,
-  resume,
+  experience,
+  projects,
   socialMediaLinks,
   Images,
   Description,

@@ -1,15 +1,16 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import Section from "../Common/Section";
 import Reveal from "../Common/Reveal";
-import { about } from "../../../data";
+import { about, hero, Images } from "../../../data";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 export default function About() {
-  const pillsRef = useRef(null);
-  const pillsInView = useInView(pillsRef, { once: true, margin: "-15% 0px" });
+  const stackRef = useRef(null);
+  const stackInView = useInView(stackRef, { once: true, margin: "-15% 0px" });
 
   return (
     <Section id="about" number="01" title="About">
@@ -27,31 +28,53 @@ export default function About() {
               {p}
             </p>
           ))}
+
+          <div className="pt-4">
+            <p className="eyebrow mb-2">Education</p>
+            <p className="text-bone-dim text-[15px]">
+              {about.education.degree}
+              <span className="text-ash-soft"> — {about.education.school}</span>
+            </p>
+            <p className="meta mt-1">{about.education.period}</p>
+          </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="md:col-span-5 space-y-8">
-          <div ref={pillsRef}>
-            <p className="eyebrow mb-3">Stack</p>
-            <motion.ul
-              initial="hidden"
-              animate={pillsInView ? "show" : "hidden"}
-              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
-              className="flex flex-wrap gap-x-4 gap-y-1"
-            >
-              {about.stack.map((s) => (
-                <motion.li
-                  key={s}
-                  variants={{
-                    hidden: { opacity: 0, y: 6 },
-                    show:   { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
-                  }}
-                  className="font-mono text-[12px] text-bone-dim"
-                >
-                  {s}
-                </motion.li>
-              ))}
-            </motion.ul>
+        <Reveal delay={0.1} className="md:col-span-5">
+          <div className="mb-8">
+            <Image
+              src={Images.profile}
+              alt={`Portrait of ${hero.name}`}
+              width={800}
+              height={800}
+              className="h-40 w-40 md:h-48 md:w-48 rounded-full object-cover border border-ink-300"
+            />
           </div>
+          <motion.div
+            ref={stackRef}
+            initial="hidden"
+            animate={stackInView ? "show" : "hidden"}
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
+            className="space-y-7"
+          >
+            {about.stackGroups.map((group) => (
+              <motion.div
+                key={group.label}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+                }}
+              >
+                <p className="eyebrow mb-2.5">{group.label}</p>
+                <ul className="flex flex-wrap gap-x-4 gap-y-1.5">
+                  {group.items.map((s) => (
+                    <li key={s} className="font-mono text-[12px] text-bone-dim">
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </motion.div>
         </Reveal>
       </div>
     </Section>

@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Un-cropped photo originals (may contain private info)
+/gallery-originals

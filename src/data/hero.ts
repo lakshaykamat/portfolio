@@ -1,22 +1,31 @@
-// EDIT ME — placeholder copy. Replace with your real role, company, status.
+// EDIT ME — role, tagline, status.
 export const hero = {
   name: "Lakshay Kamat",
-  role: "Full-Stack Engineer",
-  location: "India",
+  role: "AI Engineer",
+  location: "New Delhi, India",
+  // Mono eyebrow above the name — what you actually work on.
+  focus: "Voice Agents · RAG · LLM Systems",
   // One-line value prop — what you build and for whom.
   tagline:
-    "I solve the problems that decide whether a product ships, scales, and stays correct. Most of my work is in the calls that come before the code.",
+    "I build AI systems that survive production — voice agents, RAG pipelines, and agentic automation serving 10k+ requests a day.",
   // Status block shown next to hero. Set `available: false` if not looking.
   status: {
     available: true,
     label: "Available for new work",
     currentlyAt: "Octify Technologies", // change or set to "" to hide
   },
+  // Proof, not adjectives. Shown as a strip under the hero.
+  stats: [
+    { value: "10k+", label: "LLM requests / day" },
+    { value: "−30%", label: "latency in production" },
+    { value: "−40%", label: "deployment failures" },
+    { value: "2 yrs", label: "shipping AI systems" },
+  ],
 };
 
 // Legacy exports kept so existing imports don't break — safe to remove later.
 export const Images = {
-  profile: "/profile_pic.jpg",
+  profile: "/pic.png",
 };
 
 export const Description = {

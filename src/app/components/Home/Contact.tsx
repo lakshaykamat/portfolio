@@ -37,7 +37,7 @@ export default function Contact() {
   };
 
   return (
-    <Section id="contact" number="03" title="Contact">
+    <Section id="contact" number="05" title="Contact">
       <motion.ul
         ref={ref}
         initial="hidden"
@@ -67,8 +67,8 @@ export default function Contact() {
               <span className="relative z-10 font-mono text-[11px] uppercase tracking-[0.18em] text-ash-soft pointer-events-none">
                 {c.label}
               </span>
-              <span className="relative z-10 flex items-center gap-3 text-bone font-serif text-xl md:text-2xl
-                               group-hover:italic transition-[font-style] duration-300 pointer-events-none">
+              <span className="relative z-10 flex items-center gap-3 text-bone font-display text-xl md:text-2xl
+                               group-hover:text-accent transition-colors duration-300 pointer-events-none">
                 {c.value}
                 {c.copy ? (
                   <button

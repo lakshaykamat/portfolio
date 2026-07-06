@@ -33,13 +33,25 @@ export default function Section({
           className="mb-14 md:mb-20 flex items-end justify-between gap-6 border-b border-ink-300 pb-5"
         >
           <div className="flex items-baseline gap-5">
+            {number && (
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0 },
+                  show:   { opacity: 1, transition: { duration: 0.9, ease: easeOut } },
+                }}
+                aria-hidden
+                className="font-mono text-xs text-ash-faint select-none"
+              >
+                /{number}
+              </motion.span>
+            )}
             <span className="block overflow-hidden">
               <motion.span
                 variants={{
                   hidden: { y: "110%" },
                   show:   { y: "0%", transition: { duration: 0.9, ease: easeOut } },
                 }}
-                className="block font-serif text-bone text-4xl sm:text-5xl md:text-6xl leading-[1] tracking-tightest will-change-transform"
+                className="block font-display text-bone text-4xl sm:text-5xl md:text-6xl leading-[1] tracking-tightest will-change-transform"
               >
                 {title}
               </motion.span>

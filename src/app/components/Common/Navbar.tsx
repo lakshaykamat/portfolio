@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#about",   label: "About" },
-  { href: "#resume",  label: "Resume" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about",      label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#work",       label: "Work" },
 ];
 
 export default function Navbar() {

@@ -18,7 +18,7 @@ module.exports = {
           500: '#3A3A3A',
         },
         bone: {
-          DEFAULT: '#FFFFFF',
+          DEFAULT: '#F5F5F5',
           dim:     '#E5E5E5',
         },
         ash: {
@@ -26,12 +26,15 @@ module.exports = {
           soft:    '#6B6B6B',
           faint:   '#4A4A4A',
         },
+        accent: {
+          DEFAULT: '#4ADE80',
+          dim:     '#22C55E',
+        },
       },
       fontFamily: {
         sans:    ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        serif:   ['var(--font-display)', 'ui-serif', 'Georgia', 'serif'],
         mono:    ['var(--font-jetbrains-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-        display: ['var(--font-display)', 'ui-serif', 'Georgia', 'serif'],
+        display: ['var(--font-display)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         tightest: '-0.04em',

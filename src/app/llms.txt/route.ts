@@ -1,4 +1,4 @@
-import { about, hero, resume, socialMediaLinks } from "../../data";
+import { about, hero, experience, projects, socialMediaLinks } from "../../data";
 
 export const dynamic = "force-static";
 
@@ -16,17 +16,22 @@ ${about.paragraphs.join("\n\n")}
 - Name: ${hero.name}
 - Role: ${hero.role}
 - Location: ${hero.location}
-- Stack: ${about.stack.join(", ")}
+- Stack: ${about.stackGroups.map((g) => `${g.label}: ${g.items.join(", ")}`).join(" · ")}
 
-## Resume
+## Experience
 
-- [Live resume document](${resume.url}): Always-current resume (last updated ${resume.updated}).
+${experience.map((e) => `- ${e.role} — ${e.company} (${e.period}): ${e.summary}`).join("\n")}
+
+## Selected Work
+
+${projects.map((p) => `- ${p.title} (${p.context}, ${p.year}): ${p.description}${p.href ? ` Link: ${p.href}` : ""}`).join("\n")}
 
 ## Pages
 
-- [Home](${SITE_URL}/): Hero, about, resume, contact.
+- [Home](${SITE_URL}/): Hero, about, experience, work, contact.
 - [About](${SITE_URL}/#about): Background, stack, focus areas.
-- [Resume](${SITE_URL}/#resume): Link to the live resume document.
+- [Experience](${SITE_URL}/#experience): Work history and journey.
+- [Work](${SITE_URL}/#work): Selected projects and client work.
 - [Contact](${SITE_URL}/#contact): Email and social channels.
 
 ## Contact
