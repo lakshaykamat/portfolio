@@ -45,16 +45,6 @@ export default function Hero() {
         style={{ y, opacity }}
         className="mx-auto max-w-5xl w-full px-6 md:px-10 flex flex-col items-center text-center"
       >
-        {/* Eyebrow — role + focus */}
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: easeOut }}
-          className="eyebrow mb-6 md:mb-8"
-        >
-          {hero.role} — {hero.focus}
-        </motion.p>
-
         {/* Name */}
         <motion.h1
           variants={words}
@@ -77,7 +67,7 @@ export default function Hero() {
               variants={word}
               className="inline-block text-accent will-change-transform"
             >
-              {last}.
+              {last}
             </motion.span>
           </span>
         </motion.h1>
@@ -92,27 +82,11 @@ export default function Hero() {
           {hero.tagline}
         </motion.p>
 
-        {/* Status */}
-        {hero.status.available && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, delay: 1.05, ease: easeOut }}
-            className="mt-6 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-ash"
-          >
-            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse-dot" />
-            {hero.status.label}
-            {hero.status.currentlyAt && (
-              <span className="text-ash-soft">· {hero.status.currentlyAt}</span>
-            )}
-          </motion.p>
-        )}
-
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 1.2, ease: easeOut }}
+          transition={{ duration: 0.9, delay: 1.05, ease: easeOut }}
           className="mt-10 md:mt-12 flex flex-wrap justify-center gap-3"
         >
           <Link href="#contact" className="btn-primary">
@@ -123,31 +97,6 @@ export default function Hero() {
           </Link>
         </motion.div>
       </motion.div>
-
-      {/* Stats strip — proof, not adjectives */}
-      <motion.dl
-        initial="hidden"
-        animate="show"
-        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1, delayChildren: 1.4 } } }}
-        className="mx-auto max-w-5xl w-full px-6 md:px-10 mt-16 md:mt-20
-                   grid grid-cols-2 md:grid-cols-4 gap-y-8 border-t border-ink-300 pt-8"
-      >
-        {hero.stats.map((s) => (
-          <motion.div
-            key={s.label}
-            variants={{
-              hidden: { opacity: 0, y: 10 },
-              show:   { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
-            }}
-            className="text-center md:text-left"
-          >
-            <dd className="font-display text-bone text-3xl md:text-4xl tracking-tightest">
-              {s.value}
-            </dd>
-            <dt className="meta mt-1.5">{s.label}</dt>
-          </motion.div>
-        ))}
-      </motion.dl>
     </section>
   );
 }

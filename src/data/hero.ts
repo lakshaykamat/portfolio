@@ -6,8 +6,7 @@ export const hero = {
   // Mono eyebrow above the name — what you actually work on.
   focus: "Voice Agents · RAG · LLM Systems",
   // One-line value prop — what you build and for whom.
-  tagline:
-    "I build AI systems that survive production — voice agents, RAG pipelines, and agentic automation serving 10k+ requests a day.",
+  tagline: "I engineer intelligent systems from model to production",
   // Status block shown next to hero. Set `available: false` if not looking.
   status: {
     available: true,
